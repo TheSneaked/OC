@@ -11,7 +11,7 @@ import oc.OC;
 public final class ModEffects {
 
     public static RegistryEntry<StatusEffect> SUBMERGED_EFFECT;
-    public static RegistryEntry<StatusEffect> STUN_EFFECT;
+    public static RegistryEntry<StatusEffect> BUOYANT_EFFECT;
 
 
     private static RegistryEntry<StatusEffect> register(String id, StatusEffect statusEffect) {
@@ -20,6 +20,7 @@ public final class ModEffects {
 
     public static void registerModEffects() {
         SUBMERGED_EFFECT = register("submerged", new SubmergedEffect());
+    BUOYANT_EFFECT = register("buoyant", new BuoyantEffect());
 
 
 

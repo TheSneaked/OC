@@ -1,16 +1,17 @@
 {
-	"required": true,
-	"package": "oc.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"ExampleMixin",
-		"LivingEntityMixin"
-	],
-	"client": [
-		"ItemRendererMixin",
-		"ModelLoaderMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
+  "required": true,
+  "package": "oc.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ItemMixin",
+    "ExampleMixin",
+    "LivingEntityMixin"
+  ],
+  "client": [
+    "ItemRendererMixin",
+    "ModelLoaderMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
 	}
 }

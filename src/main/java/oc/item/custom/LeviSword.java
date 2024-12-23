@@ -1,5 +1,6 @@
 package oc.item.custom;
 
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
@@ -17,23 +18,16 @@ public class LeviSword extends SwordItem {
     }
 
     @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+    public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        target.setVelocity((attacker.getX() - target.getX())/4,( attacker.getY() - target.getY())/4, (attacker.getZ() - target.getZ())/4);
+        if (target instanceof PlayerEntity player) {
+            player.velocityModified = true;
+        }
+        return super.postHit(stack, target, attacker);
+    }
 
-        if (
-                world instanceof ServerWorld serverWorld
-        )
-            if (!((PlayerEntity)user).getItemCooldownManager().isCoolingDown(this)) {
-            serverWorld.setWeather(0, 12000, true, true);
-                ((PlayerEntity) user).getItemCooldownManager().set(this,36000);
-
-
-            }
-
-
-      return   super.use(world, user, hand);
 
 
 
     }
-}
 //kill me

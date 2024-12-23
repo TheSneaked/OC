@@ -27,6 +27,7 @@ public class ModItemGroups {
                         entries.add(ModItems.ABYSSAL_SHARD);
                         entries.add(ModItems.SCHLORP_GLORP);
                         entries.add(ModBlocks.BEDROCK_TILES);
+                        entries.add(ModItems.WIND_BAG);
 
 
 

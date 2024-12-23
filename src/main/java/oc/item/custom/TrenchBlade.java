@@ -24,6 +24,7 @@ public class TrenchBlade extends SwordItem {
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
 
 
+
         stack.damage(1, attacker, EquipmentSlot.MAINHAND);
 
         if (!target.isBlocking()) {
@@ -36,6 +37,8 @@ public class TrenchBlade extends SwordItem {
                     ((PlayerEntity) attacker).getItemCooldownManager().set(this, 200);
                 }
             }
+
+
 
 
             return super.postHit(stack, target, attacker);

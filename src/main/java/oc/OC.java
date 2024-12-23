@@ -10,8 +10,10 @@ import net.minecraft.util.Identifier;
 import oc.block.ModBlocks;
 import oc.component.ModDataComponentTypes;
 import oc.effect.ModEffects;
+import oc.enchantment.effect.ModEnchantmentEffects;
 import oc.item.ModItemGroups;
 import oc.item.ModItems;
+import oc.sound.ModSounds;
 import oc.world.dimension.ModDimensions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -50,6 +52,8 @@ public class OC implements ModInitializer {
 		ModEffects.registerModEffects();
 		ModBlocks.registerModBlocks();
 		ModDataComponentTypes.registerDataComponentTypes();
+		ModSounds.registerSounds();
+		ModEnchantmentEffects.registerModEnchantmentEffects();
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.

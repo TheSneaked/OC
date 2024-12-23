@@ -6,8 +6,13 @@
   "item.oc.abyssal_shard": "Abyssal Shard" ,
   "effect.oc.submerged": "Submerged",
   "item.oc.schlorp_glorp": "Tide Turner",
+  "sounds.oc.wind_use": "Wind Bag Used",
   "item.oc.wind_bag": "Wind Bag",
   "block.oc.bedrock_tiles": "Bedrock Tiles",
   "item.oc.levi_axe": "Leviathan War Axe" ,
-  "item.oc.abyssal_moor": "Abyssal Moor"
+  "item.oc.abyssal_moor": "Abyssal Moor",
+  "enchantment.oc.buoyyant": "Buoyant",
+  "enchantment.oc.grounding": "Grounding",
+  "enchantment.oc.returnal": "Returnal",
+  "effect.oc.buoyyant": "Buoyant"
 }
