@@ -1,16 +1,12 @@
 package oc.item.custom;
 
-import com.sun.jdi.IntegerValue;
-import net.minecraft.component.DataComponentTypes;
-import net.minecraft.component.type.BundleContentsComponent;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.passive.PufferfishEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.WindChargeEntity;
 import net.minecraft.item.BundleItem;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.item.Items;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Style;
 import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
@@ -19,7 +15,6 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import oc.component.ModDataComponentTypes;
-import org.apache.commons.lang3.math.Fraction;
 
 public class WindBag extends BundleItem {
     public WindBag(Settings settings) {
@@ -27,29 +22,43 @@ public class WindBag extends BundleItem {
     }
     private static final int ITEM_BAR_COLOR = MathHelper.packRgb(0.4F, 0.4F, 1.0F);
 
-
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack stack = user.getStackInHand(hand);
-        if (getWindCount(stack )<= 0) return super.use(world, user, hand);
-        for (int i = 0; i < 10; i++) {
 
-            WindChargeEntity windCharge = new WindChargeEntity(EntityType.WIND_CHARGE, world);
-            windCharge.setPos(user.getEyePos().x,user.getEyePos().y,user.getEyePos().z);
-             double randomX = (world.random.nextDouble() - 0.5)*20;
-            double randomY = (world.random.nextDouble() - 0.5)*20;
-            Vec3d velocity = user.getRotationVector()
-                    .multiply(4)
-                    .rotateX((float) Math.toRadians(randomX))
-                    .rotateY((float) Math.toRadians(randomY));
+        for (int i = 0; i < 10; i++) { spawnWindCharge(world, user); }
+        user.addVelocity(user.getRotationVector().multiply(-0.5));
+        user.playSound(SoundEvents.ENTITY_BREEZE_SHOOT, 1f, 1f);
 
-            windCharge.setVelocity(velocity);
-            world.spawnEntity(windCharge);
+        if(!user.isCreative()) {
+            setWindCount(stack, getWindCount(stack) - 1);
+            if (getWindCount(stack) <= 0) {
+                stack.decrement(1);
+                ItemStack bundleStack = Items.BUNDLE.getDefaultStack();
+                user.setStackInHand(hand, bundleStack);
+
+                return super.use(world, user, hand);
+            }
         }
-        user.setVelocity(user.getRotationVector().multiply(-0.5));
-        setWindCount(stack, getWindCount(stack)-1);
+
         return super.use(world, user, hand);
     }
+
+    public void spawnWindCharge(World world, PlayerEntity user) {
+        WindChargeEntity windCharge = new WindChargeEntity(EntityType.WIND_CHARGE, world);
+        windCharge.setPos(user.getEyePos().x,user.getEyePos().y,user.getEyePos().z);
+
+        double randomX = (world.random.nextDouble() - 0.5)*20;
+        double randomY = (world.random.nextDouble() - 0.5)*20;
+        Vec3d velocity = user.getRotationVector()
+                .multiply(4)
+                .rotateX((float) Math.toRadians(randomX))
+                .rotateY((float) Math.toRadians(randomY));
+
+        windCharge.setVelocity(velocity);
+        world.spawnEntity(windCharge);
+    }
+
     public int getWindCount(ItemStack stack) { return stack.get(ModDataComponentTypes.WIND_COUNT);}
     public void setWindCount(ItemStack stack, int value) { stack.set(ModDataComponentTypes.WIND_COUNT, Math.clamp(value, 0,13));}
 
@@ -66,8 +75,6 @@ public class WindBag extends BundleItem {
     public int getItemBarColor(ItemStack stack) {
         return ITEM_BAR_COLOR;
     }
-
-
 
     @Override
     public Text getName(ItemStack stack) {

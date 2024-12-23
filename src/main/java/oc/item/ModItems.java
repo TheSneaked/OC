@@ -34,7 +34,7 @@ public class ModItems {
             new SchlorpGlorp(ModToolMaterial.SCHLORP_GLORP, new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterial.SCHLORP_GLORP,4,-2.8f ))));
 
     public static final Item WIND_BAG = registerItem("wind_bag",
-            new WindBag( new  Item.Settings().component(ModDataComponentTypes.WIND_COUNT, 13)));
+            new WindBag( new  Item.Settings().maxCount(1).component(ModDataComponentTypes.WIND_COUNT, 13)));
 
 
 
