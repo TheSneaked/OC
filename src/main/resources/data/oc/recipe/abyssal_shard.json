@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "bbb",
+    "blb",
+    "bbb"
+  ],
+  "key": {
+    "l": {
+      "item": "minecraft:prismarine_shard"
+    },
+    "b": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "result": {
+    "id": "oc:abyssal_shard",
+    "count": 2
+  }
+}

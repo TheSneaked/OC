@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "  l",
+    "ll ",
+    "bl "
+  ],
+  "key": {
+    "l": {
+      "item": "oc:abyssal_shard"
+    },
+    "b": {
+      "item": "minecraft:netherite_sword"
+    }
+  },
+  "result": {
+    "id": "oc:trench_blade",
+    "count": 1
+  }
+}

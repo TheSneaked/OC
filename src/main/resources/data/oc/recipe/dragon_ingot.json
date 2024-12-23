@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " b ",
+    "blb",
+    " b "
+  ],
+  "key": {
+    "l": {
+      "item": "minecraft:diamond"
+    },
+    "b": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "id": "oc:dragon_ingot",
+    "count": 1
+  }
+}

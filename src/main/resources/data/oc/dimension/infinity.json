@@ -1,0 +1,28 @@
+{
+  "type": "oc:infinity_type",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+
+      "biome": "oc:infinity_waters",
+      "lakes": false,
+      "features": false,
+      "layers": [
+        {
+          "height": 1,
+          "block": "oc:bedrock_tiles"
+        },
+
+        {
+          "height": 62,
+          "block": "minecraft:water"
+
+        },
+        {
+          "height": 1,
+          "block": "minecraft:barrier"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "itemgroup.oc.oc": "Oceanic Weaponry",
+  "item.oc.trench_blade": "Trench Blade" ,
+  "item.oc.levi_sword": "Leviathan Sword" ,
+  "item.oc.dragon_ingot": "Dragon Steel Ingot" ,
+  "item.oc.abyssal_shard": "Abyssal Shard" ,
+  "effect.oc.submerged": "Submerged",
+  "item.oc.schlorp_glorp": "Tide Turner",
+  "item.oc.wind_bag": "Wind Bag",
+  "block.oc.bedrock_tiles": "Bedrock Tiles",
+  "item.oc.levi_axe": "Leviathan War Axe" ,
+  "item.oc.abyssal_moor": "Abyssal Moor"
+}

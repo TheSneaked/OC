@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " l ",
+    " l ",
+    " s "
+  ],
+  "key": {
+    "l": {
+      "item": "oc:dragon_ingot"
+    },
+    "s": {
+      "item": "minecraft:netherite_scrap"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "oc:levi_sword"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " ll",
+    " bl",
+    "l  "
+  ],
+  "key": {
+    "l": {
+      "item": "oc:abyssal_shard"
+    },
+    "b": {
+      "item": "minecraft:netherite_sword"
+    }
+  },
+  "result": {
+    "id": "oc:abyssal_moor",
+    "count": 1
+  }
+}
