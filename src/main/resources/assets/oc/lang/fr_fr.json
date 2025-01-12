@@ -1,0 +1,18 @@
+{
+  "itemgroup.oc.oc": "Armement Océanique",
+  "item.oc.trench_blade": "Lame des Fosses" ,
+  "item.oc.levi_sword": "L'Épée du Léviathan" ,
+  "item.oc.dragon_ingot": "Lingot d'Acier Draconique" ,
+  "item.oc.abyssal_shard": "Éclat des Abîmes" ,
+  "effect.oc.submerged": "Submergé",
+  "item.oc.schlorp_glorp": "Tourneur de Marées",
+  "sounds.oc.wind_use": "Sac de Vent utilisé",
+  "item.oc.wind_bag": "Sac de Vent",
+  "block.oc.bedrock_tiles": "Carrelage de Bedrock",
+  "item.oc.levi_axe": "Hache de Guerre du Léviathan" ,
+  "item.oc.abyssal_moor": "Amarre des Aiîmes",
+  "enchantment.oc.buoyyant": "Flottant",
+  "enchantment.oc.grounding": "Ancrage",
+  "enchantment.oc.returnal": "Restitution",
+  "effect.oc.buoyyant": "Flottant"
+}
