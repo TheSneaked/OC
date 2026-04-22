@@ -25,6 +25,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.TeleportTarget;
 import net.minecraft.world.World;
+import oc.effect.ModEffects;
 import oc.enchantment.effect.ModEnchantmentEffects;
 import oc.enchantment.effect.ReturnalEnchantmentEffect;
 import oc.world.dimension.ModDimensions;
@@ -55,7 +56,8 @@ public class SchlorpGlorp extends SwordItem {
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         if (target.getHealth() <= 0 && target instanceof ServerPlayerEntity player) {
             World world = attacker.getWorld();
-            player.setSpawnPoint(ModDimensions.SPACE_LEVEL_KEY, new BlockPos(0, 64, 0), 0, true, false);
+            player.setSpawnPoint(ModDimensions.SPACE_LEVEL_KEY, new BlockPos(1100, 108, 1000), 0, true, false);
+
         }
 
 

@@ -18,15 +18,10 @@ public class SubmergedEffect extends StatusEffect {
     public boolean applyUpdateEffect(LivingEntity entity, int amplifier) {
         entity.setOnFire(false);
 
-        if (entity.isTouchingWater()){
+            entity.setVelocity(0,-1,0);
             entity.setVelocity(0,-1,0);
             entity.velocityModified = true;
 
-            entity.setSwimming(true);
-        }
         return super.applyUpdateEffect(entity, amplifier);
     }
 }
-//Me when pizza with onions and peppers go yummers :yum:
-// im bouta
-//im bouta crhas out raghhhh

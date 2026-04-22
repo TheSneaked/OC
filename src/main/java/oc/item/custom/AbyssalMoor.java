@@ -28,11 +28,12 @@ public class AbyssalMoor extends SwordItem {
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        target.addVelocity((target.getX() * 0), (target.getY() / 150), (target.getZ() * 0));
 
-        Box box = target.getBoundingBox().expand(2.0, 2.0, 2.0);
+        Box box = target.getBoundingBox().expand(8.0, 8.0, 8.0);
         List<LivingEntity> list = target.getWorld().getNonSpectatingEntities(LivingEntity.class, box);
         for (LivingEntity livingEntity : list) {
-            livingEntity.setVelocity((livingEntity.getX() / 12000), (livingEntity.getY() / 80), (livingEntity.getZ() / 12000));
+            target.addVelocity((target.getX() * 0), (target.getY() / 150), (target.getZ() * 0));
             int particleCount = 200;
             double radius = 4.0;
             Vec3d center = attacker.getPos();

@@ -41,6 +41,8 @@ public class ClientSetup {
         registration.accept(ModelIdentifier.ofInventoryVariant(OC.id("abyssal_moor_inventory")));
         registration.accept(ModelIdentifier.ofInventoryVariant(OC.id("trench_blade_inventory")));
         registration.accept(ModelIdentifier.ofInventoryVariant(OC.id("schlorp_glorp_inventory")));
+
+
     }
     public static void clientSetup() {
         registerSimpleSpecialModel("levi_sword");
@@ -48,6 +50,7 @@ public class ClientSetup {
         registerSimpleSpecialModel("abyssal_moor");
         registerSimpleSpecialModel("trench_blade");
         registerSimpleSpecialModel("schlorp_glorp");
+
 
     }
 

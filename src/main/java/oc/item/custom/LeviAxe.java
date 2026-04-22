@@ -29,6 +29,8 @@ public class LeviAxe extends SwordItem {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
 
+        user.addVelocity((user.getX() * 0), (user.getY() / 100), (user.getZ() * 0));
+
         Box box = null;
         if (
                 world instanceof ServerWorld serverWorld
@@ -38,7 +40,7 @@ public class LeviAxe extends SwordItem {
             box = user.getBoundingBox().expand(2.0, 2.0, 2.0);
             List<LivingEntity> list = user.getWorld().getNonSpectatingEntities(LivingEntity.class, box);
             for (LivingEntity livingEntity : list) {
-                livingEntity.setVelocity((livingEntity.getX() / 12000), (livingEntity.getY() / 80), (livingEntity.getZ() / 12000));
+                livingEntity.addVelocity((livingEntity.getX() * 0 ), (livingEntity.getY() / 100 ), (livingEntity.getZ() * 0));
                 ((PlayerEntity) user).getItemCooldownManager().set(this, 100);
                 int particleCount = 200;
                 double radius = 4.0;
@@ -68,7 +70,7 @@ public class LeviAxe extends SwordItem {
                         double risingSpeed = noiseSample * 0.01; // CHANGE THIS VALUE (the 0.3)
 
                         // Spawn the fire particle at the calculated position
-                        ((ServerWorld) user.getWorld()).spawnParticles(ParticleTypes.TRIAL_SPAWNER_DETECTION_OMINOUS, x, y + 0.2, z, 0, 0, risingSpeed, 0, 0.5);
+                        ((ServerWorld) user.getWorld()).spawnParticles(ParticleTypes.RAIN, x, y + 0.2, z, 0, 0, risingSpeed, 0, 0.5);
                     }
 
 

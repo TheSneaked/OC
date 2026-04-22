@@ -3,9 +3,9 @@
 	"id": "oc",
 	"version": "${version}",
 	"name": "OC",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "A mod with a lot of weapons and items based around the ocean!!",
 	"authors": [
-		"Me!"
+		"Sneakedy, ShivAngel"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",

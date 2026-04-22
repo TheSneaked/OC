@@ -25,6 +25,8 @@ public class ModItems {
             new LeviAxe(ModToolMaterial.LEVI_AXE, new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterial.LEVI_AXE,3, -3f ))));
     public static final Item DRAGON_INGOT = registerItem("dragon_ingot",
             new Item(new Item.Settings()));
+    public static final Item SEA_MINE = registerItem("sea_mine",
+            new SeaMineItem(new Item.Settings()));
     public static final Item ABYSSAL_SHARD = registerItem("abyssal_shard",
             new Item(new Item.Settings()));
     public static final Item SCHLORP_GLORP = registerItem("schlorp_glorp",

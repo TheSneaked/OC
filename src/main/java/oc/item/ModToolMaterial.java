@@ -12,6 +12,7 @@ public enum ModToolMaterial implements ToolMaterial {
     TRENCH_BLADE(0,1000,0,5,20,() -> Ingredient.ofItems(ModItems.TRENCH_BLADE)),
     ABYSSAL_MOOR(5,1000,5,6,20,() -> Ingredient.ofItems(ModItems.ABYSSAL_MOOR)),
     LEVI_SWORD(0,1000,0,5,20,() -> Ingredient.ofItems(ModItems.LEVI_SWORD)),
+
     WIND_BAG(0,100,0,0,0,() -> Ingredient.ofItems(ModItems.WIND_BAG)),
     SCHLORP_GLORP(0,1000,0,5,20,() -> Ingredient.ofItems(ModItems.SCHLORP_GLORP)),
 

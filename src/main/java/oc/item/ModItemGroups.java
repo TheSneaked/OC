@@ -21,21 +21,15 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.TRENCH_BLADE);
                         entries.add(ModItems.ABYSSAL_MOOR);
+                        entries.add(ModItems.ABYSSAL_SHARD);
                         entries.add(ModItems.LEVI_SWORD);
                         entries.add(ModItems.LEVI_AXE);
                         entries.add(ModItems.DRAGON_INGOT);
-                        entries.add(ModItems.ABYSSAL_SHARD);
+                        entries.add(ModItems.WIND_BAG);
+                        entries.add(ModItems.SEA_MINE);
                         entries.add(ModItems.SCHLORP_GLORP);
                         entries.add(ModBlocks.BEDROCK_TILES);
-                        entries.add(ModItems.WIND_BAG);
-
-
-
-
-
                     }).build());
-
-
     public static void registerItemGroups() {
         OC.LOGGER.info("Registering Item Groups for " + OC.MOD_ID);
     }

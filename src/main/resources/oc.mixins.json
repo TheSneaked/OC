@@ -3,9 +3,9 @@
   "package": "oc.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "ItemMixin",
     "ExampleMixin",
-    "LivingEntityMixin"
+    "LivingEntityMixin",
+    "DoubleGripTechniqueMixin"
   ],
   "client": [
     "ItemRendererMixin",

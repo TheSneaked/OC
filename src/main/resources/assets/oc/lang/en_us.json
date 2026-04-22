@@ -2,17 +2,19 @@
   "itemgroup.oc.oc": "Oceanic Weaponry",
   "item.oc.trench_blade": "Trench Blade" ,
   "item.oc.levi_sword": "Leviathan Sword" ,
-  "item.oc.dragon_ingot": "Dragon Steel Ingot" ,
+  "item.oc.dragon_ingot": "Leviathan Steel Ingot" ,
   "item.oc.abyssal_shard": "Abyssal Shard" ,
-  "effect.oc.submerged": "Submerged",
+  "effect.oc.submerged": "Pressurized",
   "item.oc.schlorp_glorp": "Tide Turner",
   "sounds.oc.wind_use": "Wind Bag Used",
   "item.oc.wind_bag": "Wind Bag",
   "block.oc.bedrock_tiles": "Bedrock Tiles",
   "item.oc.levi_axe": "Leviathan War Axe" ,
-  "item.oc.abyssal_moor": "Abyssal Moor",
+  "item.oc.abyssal_moor": "Abyssal Anchor",
+  "item.oc.sea_mine": "Sea Mine",
   "enchantment.oc.buoyyant": "Buoyant",
   "enchantment.oc.grounding": "Grounding",
   "enchantment.oc.returnal": "Returnal",
-  "effect.oc.buoyyant": "Buoyant"
+  "enchantment.oc.description.buoyyant": "Makes it so entities cannot enter water on hit",
+  "effect.oc.buoyant": "Buoyant"
 }

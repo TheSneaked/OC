@@ -1,5 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
+    "gui_light": "front",
     "layer0": "oc:item/abyssal_moor"}
 }

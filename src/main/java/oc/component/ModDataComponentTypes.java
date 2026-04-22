@@ -14,12 +14,15 @@ import java.util.function.UnaryOperator;
 public class ModDataComponentTypes {
     public static final ComponentType<Integer> WIND_COUNT =
             register("wind_count", builder -> builder.codec(Codec.INT));
+    public static final ComponentType<Integer> PRESSURE_COUNT =
+            register("pressure_count", builder -> builder.codec(Codec.INT));
 
 
     private static <T>ComponentType<T> register(String name, UnaryOperator<ComponentType.Builder<T>> builderOperator) {
         return Registry.register(Registries.DATA_COMPONENT_TYPE, Identifier.of(OC.MOD_ID, name),
                 builderOperator.apply(ComponentType.builder()).build());
     }
+
 
     public static void registerDataComponentTypes() {
         OC.LOGGER.info("Registering Data Component Types for " + OC.MOD_ID);

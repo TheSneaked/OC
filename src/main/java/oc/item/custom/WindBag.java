@@ -60,10 +60,10 @@ public class WindBag extends BundleItem {
         WindChargeEntity windCharge = new WindChargeEntity(EntityType.WIND_CHARGE, world);
         windCharge.setPos(user.getEyePos().x,user.getEyePos().y,user.getEyePos().z);
 
-        double randomX = (world.random.nextDouble() - 0.5)*20;
-        double randomY = (world.random.nextDouble() - 0.5)*20;
+        double randomX = (world.random.nextDouble() - 0.5)*10.5;
+        double randomY = (world.random.nextDouble() - 0.5)*10.5;
         Vec3d velocity = user.getRotationVector()
-                .multiply(4)
+                .multiply(1.2)
                 .rotateX((float) Math.toRadians(randomX))
                 .rotateY((float) Math.toRadians(randomY));
 
